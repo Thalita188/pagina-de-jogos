@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página Padrão do Jogo</title>
+    <script>
+        function atualizarDataLancamento() {
+            const nomeJogo = document.getElementById('nomeJogo').value;
+            const dataLancamento = document.getElementById('dataLancamento');
+
+            if (nomeJogo.trim() !== "") {
+                dataLancamento.value = "01/01/2024";
+            } else {
+                dataLancamento.value = ""; 
+        }
+
+
+}
+        function enviarComentario() {
+            const notaComentario = document.getElementById('notaComentario').value;
+            const comentario = document.getElementById('comentario').value;
+            const mensagemSucesso = document.getElementById('mensagemSucesso');
+
+            if (notaComentario >= 1 && notaComentario <= 5) {
+                
+                const novoComentario = document.createElement('div');
+                novoComentario.innerHTML = `
+                    <img src="usuario.jpg" alt="Foto do Usuário" width="50">
+                    <strong>Você</strong>
+                    <p>${'★'.repeat(notaComentario)}${'☆'.repeat(5 - notaComentario)}</p>
+                    <p>${comentario || 'Comentário sem texto.'}</p>
+                    <p>Data: ${new Date().toLocaleDateString('pt-BR')}</p>
+                `;
+                
+                document.getElementById('listaComentarios').appendChild(novoComentario);
+
+                
+                mensagemSucesso.textContent = "Comentário enviado com sucesso!";
+                mensagemSucesso.style.color = "green";
+                mensagemSucesso.style.display = "block";
+
+                document.getElementById('notaComentario').value = "";
+                document.getElementById('comentario').value = "";
+            } else {
+                mensagemSucesso.textContent = "Por favor, insira uma nota de 1 a 5.";
+                mensagemSucesso.style.color = "red";
+                mensagemSucesso.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Página Padrão do Jogo</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Nome do Jogo</h2>
+            <input type="text" id="nomeJogo" placeholder="Digite o nome do jogo" oninput="atualizarDataLancamento()">
+        </section>
+
+        <section>
+            <h2>Imagem do Jogo</h2>
+            <img src="sua-imagem.jpg" alt="Imagem do Jogo" width="300"> <!-- Substitua "sua-imagem.jpg" pelo nome da sua imagem -->
+            <input type="file" id="imagemJogo" accept="image/*">
+        </section>
+
+        <section>
+            <h2>Vídeo do Jogo</h2>
+            <input type="url" id="videoJogo" placeholder="Cole o link do vídeo">
+        </section>
+
+        <section>
+            <h2>Descrição</h2>
+            <p>
+                Em "Aventura Épica", você embarca em uma jornada incrível através de mundos fascinantes e desafiadores. 
+                Enfrente inimigos ferozes, resolva quebra-cabeças intrigantes e descubra tesouros escondidos enquanto 
+                busca por seu destino. 
+            </p>
+            <p>
+                Com gráficos impressionantes e uma trilha sonora envolvente, "Aventura Épica" oferece uma experiência 
+                imersiva que manterá você na ponta da cadeira. Personalize seu personagem, desenvolva habilidades 
+                únicas e forme alianças com outros jogadores ao longo do caminho.
+            </p>
+            <p>
+                Prepare-se para uma aventura emocionante cheia de surpresas, desafios e momentos inesquecíveis!
+            </p>
+        </section>
+
+        <section>
+            <h2>Data de Lançamento</h2>
+            <p>Data: 01/01/2024</p>
+        </section>
+
+        <section>
+            <h2>Classificação Etária</h2>
+            <p>Classificação: 12+</p>
+        </section>
+
+        <section>
+            <h2>Avaliação Média</h2>
+            <p>Avaliação: ★★★★☆ 4.5</p>
+        </section>
+
+        <section>
+            <h2>Comentários dos Usuários</h2>
+            <div id="listaComentarios">
+                <div>
+                    <img src="usuario.jpg" alt="Foto do Usuário" width="50">  
+                    <strong>Lucas Silva (@lucas.silva)</strong>
+                    <p>★★★★★</p>
+                    <p>Adorei o jogo! A jogabilidade é incrível e os gráficos são lindos.</p>
+                    <p>Data: 15/10/2024</p>
+                </div>
+                <div>
+                    <img src="usuario.jpg" alt="Foto do Usuário" width="50"> 
+                    <strong>Ana Souza (@ana.souza)</strong>
+                    <p>★★★★☆</p>
+                    <p>Bom jogo, mas gostaria que houvesse mais níveis.</p>
+                    <p>Data: 16/10/2024</p>
+                </div>
+                <div>
+                    <img src="usuario.jpg" alt="Foto do Usuário" width="50"> 
+                    <strong>Marcos Lima (@marcos.lima)</strong>
+                    <p>★★★☆☆</p>
+                    <p>Jogo divertido, mas com alguns bugs.</p>
+                    <p>Data: 17/10/2024</p>
+                </div>
+            </div>
+            <h3>Adicionar Comentário</h3>
+            <label for="notaComentario">Nota:</label>
+            <input type="number" id="notaComentario" min="1" max="5">
+            <textarea id="comentario" placeholder="Escreva seu comentário (opcional)"></textarea>
+            <button onclick="enviarComentario()">Enviar</button>
+            <p id="mensagemSucesso" style="display:none; margin-top: 10px;"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Plataforma Pirata de Jogos</p>
+    </footer>
+</body>
+</html>
