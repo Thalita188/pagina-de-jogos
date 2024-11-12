@@ -1,144 +1,352 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
+    <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Página Padrão do Jogo</title>
-    <script>
-        function atualizarDataLancamento() {
-            const nomeJogo = document.getElementById('nomeJogo').value;
-            const dataLancamento = document.getElementById('dataLancamento');
-
-            if (nomeJogo.trim() !== "") {
-                dataLancamento.value = "01/01/2024";
-            } else {
-                dataLancamento.value = ""; 
+    <title>Página do Jogo - Among Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f1f1f1;
+            font-size: 0.8em;
         }
 
-
-}
-        function enviarComentario() {
-            const notaComentario = document.getElementById('notaComentario').value;
-            const comentario = document.getElementById('comentario').value;
-            const mensagemSucesso = document.getElementById('mensagemSucesso');
-
-            if (notaComentario >= 1 && notaComentario <= 5) {
-                
-                const novoComentario = document.createElement('div');
-                novoComentario.innerHTML = `
-                    <img src="usuario.jpg" alt="Foto do Usuário" width="50">
-                    <strong>Você</strong>
-                    <p>${'★'.repeat(notaComentario)}${'☆'.repeat(5 - notaComentario)}</p>
-                    <p>${comentario || 'Comentário sem texto.'}</p>
-                    <p>Data: ${new Date().toLocaleDateString('pt-BR')}</p>
-                `;
-                
-                document.getElementById('listaComentarios').appendChild(novoComentario);
-
-                
-                mensagemSucesso.textContent = "Comentário enviado com sucesso!";
-                mensagemSucesso.style.color = "green";
-                mensagemSucesso.style.display = "block";
-
-                document.getElementById('notaComentario').value = "";
-                document.getElementById('comentario').value = "";
-            } else {
-                mensagemSucesso.textContent = "Por favor, insira uma nota de 1 a 5.";
-                mensagemSucesso.style.color = "red";
-                mensagemSucesso.style.display = "block";
-            }
+        .header {
+            background-color: #171a21;
+            color: white;
+            padding: 15px;
         }
-    </script>
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        
+        .main-container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px 0 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        
+        .video {
+            width: 80%;
+            height: 350px;
+            object-fit: cover;
+            margin-top: 0;
+        }
+
+        .description-container {
+            width: 35%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .description-image {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            margin: 0;
+        }
+
+        .game-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .game-info div {
+            width: 100%;
+        }
+
+        .game-info h3 {
+            font-size: 0.9em;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .game-info p {
+            margin: 5px 0;
+            font-size: 0.8em;
+        }
+
+        .analyses {
+            display: flex;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .analyses p {
+            font-size: 0.8em;
+            margin: 5px 0;
+        }
+
+        
+        .launch-dev {
+            display: flex;
+            gap: 20px;
+        }
+
+        .image-below-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-below {
+            width: 80%; 
+        }
+
+        .image-below img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        
+        .image-below-container img {
+            width: 100%;
+            height: auto;
+        }
+
+       
+        .imposter-image {
+            width: 3%;
+            height: auto;
+            margin-left: 6px; 
+            margin-top: 80px;
+        }
+
+        
+        .rating-image {
+            width: 5%;
+            height: auto;
+            margin-top: 110px; 
+            margin-left: 200; 
+            margin-left: 50px;
+        }
+
+        
+        .rating-info {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .rating-info h3 {
+            font-size: 0.9em;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .rating-info p {
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Página Padrão do Jogo</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Nome do Jogo</h2>
-            <input type="text" id="nomeJogo" placeholder="Digite o nome do jogo" oninput="atualizarDataLancamento()">
-        </section>
 
-        <section>
-            <h2>Imagem do Jogo</h2>
-            <img src="sua-imagem.jpg" alt="Imagem do Jogo" width="300"> <!-- Substitua "sua-imagem.jpg" pelo nome da sua imagem -->
-            <input type="file" id="imagemJogo" accept="image/*">
-        </section>
+    <div class="main-container">
+        
+        <div class="header">
+            <h1>Among Us</h1>
+        </div>
 
-        <section>
-            <h2>Vídeo do Jogo</h2>
-            <input type="url" id="videoJogo" placeholder="Cole o link do vídeo">
-        </section>
+        
+        <img src="https://pplware.sapo.pt/wp-content/uploads/2020/10/Among-us_0.jpg" alt="Imagem do Jogo" class="main-image">
 
-        <section>
-            <h2>Descrição</h2>
-            <p>
-                Em "Aventura Épica", você embarca em uma jornada incrível através de mundos fascinantes e desafiadores. 
-                Enfrente inimigos ferozes, resolva quebra-cabeças intrigantes e descubra tesouros escondidos enquanto 
-                busca por seu destino. 
-            </p>
-            <p>
-                Com gráficos impressionantes e uma trilha sonora envolvente, "Aventura Épica" oferece uma experiência 
-                imersiva que manterá você na ponta da cadeira. Personalize seu personagem, desenvolva habilidades 
-                únicas e forme alianças com outros jogadores ao longo do caminho.
-            </p>
-            <p>
-                Prepare-se para uma aventura emocionante cheia de surpresas, desafios e momentos inesquecíveis!
-            </p>
-        </section>
+        
+        <div class="content-container">
+            
+            <video class="video" controls>
+                <source src="https://video.fastly.steamstatic.com/store_trailers/257032139/movie480_vp9.webm?t=1718741653" type="video/webm">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
 
-        <section>
-            <h2>Data de Lançamento</h2>
-            <p>Data: 01/01/2024</p>
-        </section>
+            
+            <div class="description-container">
+                <img src="https://www.mundosmart.pt/wp-content/uploads/2020/10/among-us.jpg" alt="Imagem do Jogo" class="description-image">
+                <p>Among Us é um jogo de trabalho em equipe e trairagem online ou em rede local para 4 a 15 jogadores... no espaço!</p>
 
-        <section>
-            <h2>Classificação Etária</h2>
-            <p>Classificação: 12+</p>
-        </section>
-
-        <section>
-            <h2>Avaliação Média</h2>
-            <p>Avaliação: ★★★★☆ 4.5</p>
-        </section>
-
-        <section>
-            <h2>Comentários dos Usuários</h2>
-            <div id="listaComentarios">
-                <div>
-                    <img src="usuario.jpg" alt="Foto do Usuário" width="50">  
-                    <strong>Lucas Silva (@lucas.silva)</strong>
-                    <p>★★★★★</p>
-                    <p>Adorei o jogo! A jogabilidade é incrível e os gráficos são lindos.</p>
-                    <p>Data: 15/10/2024</p>
-                </div>
-                <div>
-                    <img src="usuario.jpg" alt="Foto do Usuário" width="50"> 
-                    <strong>Ana Souza (@ana.souza)</strong>
-                    <p>★★★★☆</p>
-                    <p>Bom jogo, mas gostaria que houvesse mais níveis.</p>
-                    <p>Data: 16/10/2024</p>
-                </div>
-                <div>
-                    <img src="usuario.jpg" alt="Foto do Usuário" width="50"> 
-                    <strong>Marcos Lima (@marcos.lima)</strong>
-                    <p>★★★☆☆</p>
-                    <p>Jogo divertido, mas com alguns bugs.</p>
-                    <p>Data: 17/10/2024</p>
+                
+                <div class="game-info">
+                    <div class="analyses">
+                        <div>
+                            <h3>Análises recentes:</h3>
+                            <p>Muito positivas (2,098)</p>
+                        </div>
+                        <div>
+                            <h3>Todas as análises:</h3>
+                            <p>Muito positivas (608,454)</p>
+                        </div>
+                    </div>
+                    <div class="launch-dev">
+                        <div>
+                            <h3>Data de lançamento:</h3>
+                            <p>16/nov./2018</p>
+                        </div>
+                        <div>
+                            <h3>Desenvolvedor:</h3>
+                            <p>Innersloth</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h3>Adicionar Comentário</h3>
-            <label for="notaComentario">Nota:</label>
-            <input type="number" id="notaComentario" min="1" max="5">
-            <textarea id="comentario" placeholder="Escreva seu comentário (opcional)"></textarea>
-            <button onclick="enviarComentario()">Enviar</button>
-            <p id="mensagemSucesso" style="display:none; margin-top: 10px;"></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 Plataforma Pirata de Jogos</p>
-    </footer>
+        </div>
+
+        
+        <div class="image-below-container">
+           
+            <div class="image-below">
+                
+            <img src="https://assets.funnygames.pt/3/114193/99932/1200x630/imposter.webp" alt="Imagem do Jogo" class="imposter-image">
+           
+            <div class="rating-image">
+                <img src="https://store.fastly.steamstatic.com/public/shared/images/game_ratings/DEJUS/l.png?v=2" alt="Imagem de Rating de Jogo">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+           
+    <h2>Sobre o Jogo</h2>
+    <p><strong>Boas-vindas, recrutas!</strong></p>
+    <p>Venham embarcar no novo mapa de <strong>Among Us: Airship</strong>! Trabalhem em equipe na nave para executar o maior dos planos... Se vai ser como <em>Tripulante</em> ou <em>Impostor</em> já são outros quinhentos.</p>
+
+    <p>O 4º mapa, que é o maior até agora</p>
+    <p>Novas tarefas, como polir joias, tirar o lixo (caramba, que top!) e muito mais</p>
+    <p>A possibilidade de escolher a sala inicial</p>
+    <p>Áreas novinhas para explorar (ou para ser vítima de assassinato)</p>
+    <p>Maior mobilidade, graças a escadas e plataformas móveis</p>
+    <p>Novos chapéus grátis: broche de coração, sobrancelhas iradas, chifre de unicórnio, luva cheia e muito mais!</p>
+
+    <div class="rating">
+        <h3>Avaliação Média</h3>
+        <div class="stars">
+            <span>⭐⭐⭐⭐⭐</span> <span>(4.5/5)</span>
+        </div>
+    </div>
+
+    
+    <div class="comments-section">
+        <h3>Comentários</h3>
+
+        
+        <div class="comment">
+            <div class="comment-header">
+                <img src="caminho/para/foto_do_usuario.jpg" alt="Foto do Usuário" class="user-photo">
+                <div class="user-info">
+                    <span class="user-name">João Silva</span>
+                    <span class="user-username">@joao_silva</span>
+                    <div class="user-rating">⭐⭐⭐⭐</div>
+                    <span class="comment-date">14 de Novembro, 2024</span>
+                </div>
+            </div>
+            <p class="user-comment">Muito bom! A nave é incrível e as novas tarefas são super divertidas!</p>
+        </div>
+
+        <div class="comment">
+            <div class="comment-header">
+                <img src="caminho/para/foto_do_usuario2.jpg" alt="Foto do Usuário" class="user-photo">
+                <div class="user-info">
+                    <span class="user-name">Maria Oliveira</span>
+                    <span class="user-username">@maria_oliveira</span>
+                    <div class="user-rating">⭐⭐⭐⭐⭐</div>
+                    <span class="comment-date">15 de Novembro, 2024</span>
+                </div>
+            </div>
+            <p class="user-comment">Melhor mapa até agora! A nova mobilidade com escadas e plataformas móveis é sensacional.</p>
+        </div>
+
+        <div class="comment">
+            <div class="comment-header">
+                <img src="caminho/para/foto_do_usuario3.jpg" alt="Foto do Usuário" class="user-photo">
+                <div class="user-info">
+                    <span class="user-name">Carlos Souza</span>
+                    <span class="user-username">@carlos_souza</span>
+                    <div class="user-rating">⭐⭐⭐</div>
+                    <span class="comment-date">16 de Novembro, 2024</span>
+                </div>
+            </div>
+            <p class="user-comment">O mapa é bom, mas sinto falta de mais opções de personalização. De resto, está excelente!</p>
+        </div>
+
+        
+        <div class="comment">
+            <div class="comment-header">
+                <img src="caminho/para/foto_do_usuario4.jpg" alt="Foto do Usuário" class="user-photo">
+                <div class="user-info">
+                    <span class="user-name">Felipe Martins</span>
+                    <span class="user-username">@felipe_martins</span>
+                    <div class="user-rating">⭐⭐⭐⭐⭐</div>
+                    <span class="comment-date">17 de Novembro, 2024</span>
+                </div>
+            </div>
+            <p class="user-comment">O mapa está incrível, adoro a ideia de poder escolher a sala inicial. Super divertido!</p>
+        </div>
+
+       
+        <div class="comment">
+            <div class="comment-header">
+                <img src="caminho/para/foto_do_usuario5.jpg" alt="Foto do Usuário" class="user-photo">
+                <div class="user-info">
+                    <span class="user-name">Luciana Costa</span>
+                    <span class="user-username">@luciana_costa</span>
+                    <div class="user-rating">⭐⭐⭐</div>
+                    <span class="comment-date">18 de Novembro, 2024</span>
+                </div>
+            </div>
+            <p class="user-comment">Apesar de ser um bom mapa, acho que alguns bugs podem ser corrigidos, mas no geral é uma ótima atualização.</p>
+        </div>
+
+        
+        <div class="comment-form">
+            <h4>Deixe seu comentário:</h4>
+            <form>
+                <div class="rating-input">
+                    <label for="rating">Sua Avaliação:</label>
+                    <select id="rating" name="rating">
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </select>
+                </div>
+                <textarea id="comment" name="comment" rows="4" placeholder="Deixe seu comentário (opcional)"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
