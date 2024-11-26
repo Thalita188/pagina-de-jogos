@@ -1,526 +1,255 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Dead Redemption 2</title>
+    <title>Passe Pirata</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #1b2838;
-        color: white;
-    }
-    header {
-        background-color: #171a21;
-        padding: 40px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    nav {
-        flex: 1;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li {
-        margin: 0 20px;
-    }
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2em;
-    }
-    nav ul li a:hover {
-        text-decoration: underline;
-    }
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 60px 20px;
-    }
-    .content img {
-        width: 80%;
-        height: 600px;
-        object-fit: cover;
-    }
-    .media {
-        display: flex;
-        justify-content: flex-start; 
-        align-items: flex-start;
-        margin-top: 40px;
-        width: 80%;
-        gap: 20px;
-    }
-    .media video {
-        width: 65%;
-        height: auto;
-        float: left; 
-    }
-    .media .media-content {
-        width: 35%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .media img {
-        width: 100%;
-        height: auto;
-    }
-    .description {
-        margin-top: 20px;
-        font-size: 0.8em;
-        line-height: 1.2;
-        color: white;
-    }
-    .game-description {
-        margin-top: 20px;
-        font-size: 0.8em;
-        line-height: 1.2;
-        color: white;
-    }
-    .game-info {
-        margin-top: 40px;
-        width: 100%;
-        color: white;
-        text-align: justify;
-        line-height: 1.8;
-        float: left; 
-    }
-    .game-image {
-        margin-top: 40px;
-        width: 30%; 
-        height: auto;
-        float: right; 
-        margin-left: 20px; 
-    }
+    <link rel="stylesheet" href="css/menu.css">
 
-    
-        .rating-container { width: 100%; margin: 20px 0; padding: 20px; border: 1px solid #4f1d1d; border-radius: 5px; background-color: #370e0e; text-align: center; } .star { color: gold; font-size: 24px; margin-right: 5px; } .comments-container { width: 100%; margin: 20px 0; } .comment { display: flex; flex-direction: column; margin-bottom: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #fff; } .comment-header { display: flex; align-items: center; margin-bottom: 10px; } .comment-header img { border-radius: 50%; margin-right: 10px; } .username { font-weight: bold; margin-right: 10px; } .comment-date { font-size: 12px; color: #777; } .comment-body { margin-top: 10px; } .comment-rating { display: flex; align-items: center; } .comment-form { display: flex; flex-direction: column; margin-top: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; } .comment-form textarea { width: 100%; height: 100px; margin-bottom: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; } .star-rating { display: flex; flex-direction: row-reverse; justify-content: center; margin-bottom: 10px; } .star-rating input { display: none; } .star-rating label { font-size: 20px; color: #ddd; cursor: pointer; } .star-rating input:checked ~ label { color: gold; } .star-rating label:hover, .star-rating label:hover ~ label { color: gold; }
-    </style>
-</head>
-<body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Descrição</a></li>
-                <li><a href="#">sobre este jogo</a></li>
-                <li><a href="#">comentarios</a></li>
-            </ul>
-        </nav>
+        <div class="logo-e-nome">
+            <i class="bi bi-xbox"></i>
+            <span>PASSE PIRATA</span>
+        </div>
+        <a class="logx" href="logout.html">Log out</a>
+        
     </header>
-    <div class="content">
-        <img src="https://i1.wp.com/www.lifeisxbox.eu/wp-content/uploads/2019/12/rdr2.jpg?fit=1080%2c1080" alt="Imagem Principal">
-        <div class="media">
-            <video controls>
-                
-                <source src="https://video.fastly.steamstatic.com/store_trailers/256768244/movie480.webm?t=1574881606" type="video/webm">
-                Seu navegador não suporta vídeos HTML5.
-            </video>
-            <div class="media-content">
-                <img src="https://vgezone.com/wp-content/uploads/2017/09/Red-Dead-Redemption-2-Banner-LATAM.jpg" alt="Imagem de Red Dead Redemption 2">
-                <div class="description">
-                    <p><strong> DESCRIÇÃO Red Dead Redemption 2</strong>, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles, agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.</p>
-                </div>
-            </div>
-            
-        </div>
-        
-     </video>
-        </div>
-        
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <div class="game-info" style="width: 50%; text-align: left;">
-                <h2>Sobre este jogo</h2>
-                <p>Estados Unidos, 1899.</p>
-                <p>Arthur Morgan e a gangue Van der Linde são bandidos em fuga. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver no impiedioso coração dos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou.</p>
-                <p>Agora com conteúdo adicional no Modo História e um Modo Foto repleto de recursos, Red Dead Redemption 2 também inclui acesso gratuito ao mundo compartilhado de Red Dead Online. Nele, os jogadores assumem uma diversidade de ofícios para construir suas próprias trajetórias na fronteira, seja perseguindo criminosos procurados como Caçador de Recompensa, estabelecendo um negócio como Mercador, escavando tesouros exóticos como Colecionador ou operando uma destilaria subterrânea como Moonshiner, e muito mais.</p>
-                <p>Com novas melhorias gráficas e técnicas que tornam o jogo mais imersivo, Red Dead Redemption 2 para PC aproveita ao máximo a potência do PC para dar vida a cada canto deste mundo gigantesco, rico e detalhado, incluindo maiores distâncias de renderização; iluminação global de maior qualidade e oclusão do ambiente para melhorar a iluminação do dia e da noite; melhorias nos reflexos e sombras mais fortes e de maior resolução a todas as distâncias; texturas de árvore tesseladas e melhorias nas texturas de grama e pelo, tornando todas as plantas e animais mais realistas.</p>
+    
 
-            <p>Red Dead Redemption 2 para PC também oferece suporte a HDR e a monitores de ponta com resolução 4K ou superior, configurações com vários monitores, widescreen, taxas de quadros mais rápidas, entre outras opções.</p>
-            <h2>Descrição do conteúdo adulto</h2>
-
-            <p>Descrição dos desenvolvedores sobre o conteúdo:</p> <p>Este jogo pode conter conteúdo não apropriado para todas as idades ou para visualização no trabalho: Conteúdo adulto não específico</p>
-             
-
-
-
-
-
-
-            
-          
-<div class="rating-container" style="margin-top: 90px;">
-    <h2>Avaliação Média</h2>
-    <div>
-        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+   <!-- Menu Lateral -->
+<nav class="menu-lateral">
+    <div class="menu-item">
+        <a href="#">
+            <span class="menu-icon"><i class="bi bi-controller"></i></span>
+            <span class="txt-link">Página Inicial</span>
+        </a>
     </div>
-    <p>4.0 de 5 estrelas</p>
-</div>
+    <hr>
+    <div class="menu-item">
+        <a href="#">
+            <span class="menu-icon"><i class="bi bi-person-circle"></i></span>
+            <span class="txt-link">Meu Perfil</span>
+        </a>
+    </div>
+    <hr>
+    <div class="menu-item">
+        <a href="#">
+            <span class="menu-icon"><i class="bi bi-people-fill"></i></span>
+            <span class="txt-link">Amigos</span>
+        </a>
+    </div>
+    <hr>
+    <div class="menu-item">
+        <a href="#">
+            <span class="menu-icon"><i class="bi bi-gem"></i></span>
+            <span class="txt-link">Planos</span>
+        </a>
+    </div>
+    <hr>
+    <div class="menu-item">
+        <a href="#">
+            <span class="menu-icon"><i class="bi bi-piggy-bank"></i></span>
+            <span class="txt-link">Meus Pagamentos</span>
+        </a>
+    </div>
+</nav>
 
-<div class="comments-container">
-    <h2>Comentários </h2>
+    </header>
+
     
     
-    <div class="comment">
-        <div class="comment-header">
-            <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
-            <div>
-                <div class="username">Ana Silva</div>
-                <div class="comment-date">15 de novembro de 2024</div>
+        
+           
+    </head>
+    <body>
+        <header>
+          
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="https://i1.wp.com/www.lifeisxbox.eu/wp-content/uploads/2019/12/rdr2.jpg?fit=1080%2c1080" alt="Imagem Principal">
+            <div class="media">
+                <video controls>
+                    
+                    <source src="https://video.fastly.steamstatic.com/store_trailers/256768244/movie480.webm?t=1574881606" type="video/webm">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="media-content">
+                    <img src="https://vgezone.com/wp-content/uploads/2017/09/Red-Dead-Redemption-2-Banner-LATAM.jpg" alt="Imagem de Red Dead Redemption 2">
+                    <div class="description">
+                        <p><strong> DESCRIÇÃO Red Dead Redemption 2</strong>, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles, agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.</p>
+                    </div>
+                </div>
+                
             </div>
-        </div>
-        <div class="comment-rating">
+            
+         </video>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-top: px;">
+                <div class="game-info" style="width: 50%; text-align: left;">
+                    <h2>Sobre este jogo</h2>
+                    <p>Estados Unidos, 1899.</p>
+                    <p>Arthur Morgan e a gangue Van der Linde são bandidos em fuga. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver no impiedioso coração dos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou.</p>
+                    <p>Agora com conteúdo adicional no Modo História e um Modo Foto repleto de recursos, Red Dead Redemption 2 também inclui acesso gratuito ao mundo compartilhado de Red Dead Online. Nele, os jogadores assumem uma diversidade de ofícios para construir suas próprias trajetórias na fronteira, seja perseguindo criminosos procurados como Caçador de Recompensa, estabelecendo um negócio como Mercador, escavando tesouros exóticos como Colecionador ou operando uma destilaria subterrânea como Moonshiner, e muito mais.</p>
+                    <p>Com novas melhorias gráficas e técnicas que tornam o jogo mais imersivo, Red Dead Redemption 2 para PC aproveita ao máximo a potência do PC para dar vida a cada canto deste mundo gigantesco, rico e detalhado, incluindo maiores distâncias de renderização; iluminação global de maior qualidade e oclusão do ambiente para melhorar a iluminação do dia e da noite; melhorias nos reflexos e sombras mais fortes e de maior resolução a todas as distâncias; texturas de árvore tesseladas e melhorias nas texturas de grama e pelo, tornando todas as plantas e animais mais realistas.</p>
+    
+                <p>Red Dead Redemption 2 para PC também oferece suporte a HDR e a monitores de ponta com resolução 4K ou superior, configurações com vários monitores, widescreen, taxas de quadros mais rápidas, entre outras opções.</p>
+                <h2>Descrição do conteúdo adulto</h2>
+    
+                <p>Descrição dos desenvolvedores sobre o conteúdo:</p> <p>Este jogo pode conter conteúdo não apropriado para todas as idades ou para visualização no trabalho: Conteúdo adulto não específico</p>
+                 
+ 
+    <div class="rating-container" style="margin-top: 90px;">
+        <h2>Avaliação Média</h2>
+        <div>
             <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
         </div>
-        <div class="comment-body">
-            <p>Excelente jogo! A história é incrível e a jogabilidade é fluida.</p>
-        </div>
+        <p>4.0 de 5 estrelas</p>
     </div>
     
-    
-    <div class="comment">
-        <div class="comment-header">
-            <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
-            <div>
-                <div class="username">Carlos Mendes</div>
-                <div class="comment-date">16 de novembro de 2024</div>
-            </div>
-        </div>
-        <div class="comment-rating">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <div class="comment-body">
-            <p>Melhor jogo de faroeste que já joguei! Vale cada centavo.</p>
-        </div>
-    </div>
-    
-    <!-- Comentário Exemplo 3 -->
-    <div class="comment">
-        <div class="comment-header">
-            <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
-            <div>
-                <div class="username">Mariana Pereira</div>
-                <div class="comment-date">17 de novembro de 2024</div>
-            </div>
-        </div>
-        <div class="comment-rating">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <div class="comment-body">
-            <p>Gráficos impressionantes e mundo aberto cheio de detalhes. Recomendo!</p>
-        </div>
-    </div>
-    
-    <!-- Comentário Exemplo 4 -->
-    <div class="comment">
-        <div class="comment-header">
-            <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
-            <div>
-                <div class="username">João Souza</div>
-                <div class="comment-date">18 de novembro de 2024</div>
-            </div>
-        </div>
-        <div class="comment-rating">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span><span class="star">☆</span>
-        </div>
-        <div class="comment-body">
-            <p>Jogo muito bom, mas encontrei alguns bugs durante a campanha.</p>
-        </div>
-    </div>
-</div>
-
-<div class="comment-form">
-    <h2>Deixe seu comentário</h2>
-    <form>
-        <div class="star-rating">
-            <input type="radio" id="5-stars" name="rating" value="5"><label for="5-stars" class="star">★</label>
-            <input type="radio" id="4-stars" name="rating" value="4"><label for="4-stars" class="star">★</label>
-            <input type="radio" id="3-stars" name="rating" value="3"><label for="3-stars" class="star">★</label>
-            <input type="radio" id="2-stars" name="rating" value="2"><label for="2-stars" class="star">★</label>
-            <input type="radio" id="1-star" name="rating" value="1"><label for="1-star" class="star">★</label>
-        </div>
-        <textarea placeholder="Deixe seu comentário (opcional)"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</div>
-
-            </div>
-
-               
-
-            <div class="game-image" style="width: 26%; height: auto; margin-left: 20px;">
-               
-                    <div class="game-image" style="width: 90%; height: auto; margin-left: 20px;">
-                        
-                    <img src="https://dengekionline.com/elem/000/001/807/1807035/reddeadredemption2_001_cs1w1_720x.jpg" alt="Red Dead Redemption 2" style="width: 100%; height: auto;">
-                    <img src="https://store.fastly.steamstatic.com/public/shared/images/game_ratings/DEJUS/18.png?v=2" alt="Classificação 18+" style="width: 30%; height: auto; margin-top: 20px;"> 
-                    <div style="text-align: left;"> <p>Violência</p> <p>Atos criminosos</p> <p>Drogas ilícitas</p>
-                    </div>
+    <div class="comments-container">
+        <h2>Comentários </h2>
+        
+        
+        <div class="comment">
+            <div class="comment-header">
+                <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
+                <div>
+                    <div class="username">Ana Silva</div>
+                    <div class="comment-date">15 de novembro de 2024</div>
                 </div>
-                
-
-
-            
-
-                    <div style="width: 100%; height: auto;">
-                        
-                        <div style="width: 100%; padding: 10px; border: 1px solid #09021b; border-radius: 5px; background-color: #06101b; color: rgb(236, 236, 244); text-align: center;">
+            </div>
+            <div class="comment-rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+            </div>
+            <div class="comment-body">
+                <p>Excelente jogo! A história é incrível e a jogabilidade é fluida.</p>
+            </div>
+        </div>
+        
+        
+        <div class="comment">
+            <div class="comment-header">
+                <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
+                <div>
+                    <div class="username">Carlos Mendes</div>
+                    <div class="comment-date">16 de novembro de 2024</div>
+                </div>
+            </div>
+            <div class="comment-rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="comment-body">
+                <p>Melhor jogo de faroeste que já joguei! Vale cada centavo.</p>
+            </div>
+        </div>
+        
+        <!-- Comentário Exemplo 3 -->
+        <div class="comment">
+            <div class="comment-header">
+                <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
+                <div>
+                    <div class="username">Mariana Pereira</div>
+                    <div class="comment-date">17 de novembro de 2024</div>
+                </div>
+            </div>
+            <div class="comment-rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <div class="comment-body">
+                <p>Gráficos impressionantes e mundo aberto cheio de detalhes. Recomendo!</p>
+            </div>
+        </div>
+        
+        <!-- Comentário Exemplo 4 -->
+        <div class="comment">
+            <div class="comment-header">
+                <img src="https://via.placeholder.com/50" alt="Foto do Usuário">
+                <div>
+                    <div class="username">João Souza</div>
+                    <div class="comment-date">18 de novembro de 2024</div>
+                </div>
+            </div>
+            <div class="comment-rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span><span class="star">☆</span>
+            </div>
+            <div class="comment-body">
+                <p>Jogo muito bom, mas encontrei alguns bugs durante a campanha.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="comment-form">
+        <h2>Deixe seu comentário</h2>
+        <form>
+            <div class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5"><label for="5-stars" class="star">★</label>
+                <input type="radio" id="4-stars" name="rating" value="4"><label for="4-stars" class="star">★</label>
+                <input type="radio" id="3-stars" name="rating" value="3"><label for="3-stars" class="star">★</label>
+                <input type="radio" id="2-stars" name="rating" value="2"><label for="2-stars" class="star">★</label>
+                <input type="radio" id="1-star" name="rating" value="1"><label for="1-star" class="star">★</label>
+            </div>
+            <textarea placeholder="Deixe seu comentário (opcional)"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+                </div>
+    
+                   
+    
+                <div class="game-image" style="width: 26%; height: auto; margin-left: 20px;">
+                   
+                        <div class="game-image" style="width: 90%; height: auto; margin-left: 20px;">
                             
-                            <div style=" text-align:left;"> <p>Título: Red Dead Redemption 2</p>  <p>Gênero: Ação, Aventura</p>
-                    
-                            <p>Desenvolvedor: Rockstar Games</p>
-                            
-                            <p>Série: Red Dead Redemption</p>
-                            <p>Data de lançamento: 5/dez./2019</p>
-                            
+                        <img src="https://dengekionline.com/elem/000/001/807/1807035/reddeadredemption2_001_cs1w1_720x.jpg" alt="Red Dead Redemption 2" style="width: 100%; height: auto;">
+                        <img src="https://store.fastly.steamstatic.com/public/shared/images/game_ratings/DEJUS/18.png?v=2" alt="Classificação 18+" style="width: 30%; height: auto; margin-top: 20px;"> 
+                        <div style="text-align: left;"> <p>Violência</p> <p>Atos criminosos</p> <p>Drogas ilícitas</p>
                         </div>
                     </div>
-                </div>
-
-                <div style="width: 100%; padding: 10px; border: 1px solid #06010f; border-radius: 5px; background-color: #06101b; text-align: center; margin-top: 60px;">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjvwvbbnhYVf2C8TLmNb5xPad70E5XnnXritve5AVmE2nJDCg5-_CF5HnjFtPHqAPjSj9dA8QFlaruNeJNB2utq4mkLnT8pA8iYSHvsTx7iVK3EFyNEgvbVoOhS8hiRIhr6u3V1LwVOLw0P4hb3h6xTFJLZu-n3wGWRIDNWwF50ZZo07mq4Y2y6waYF_9D/s800/premios_steam_2023_indicados_premiacao.jpg" alt="Steam Awards 2023" style="width: 100%; height: auto; margin-bottom: 20px;">
-                    <img src="https://www.rdr2.org/wp-content/uploads/2021/01/steamawards2.jpg" alt="Steam Awards" style="width: 100%; height: auto;">
-                </div>
-                
-
-                <!DOCTYPE html>
-                <html lang="pt-BR">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <style>
-                        .rating-container {
-                            width: 100%;
-                            margin: 20px 0;
-                            padding: 20px;
-                            border: 1px solid #080336;
-                            border-radius: 5px;
-                            background-color: #090328;
-                            text-align: center;
-                        }
-                
-                        .star {
-                            color: gold;
-                            font-size: 24px;
-                            margin-right: 5px;
-                        }
-                
-                        .comments-container {
-                            width: 100%;
-                            margin: 20px 0;
-                        }
-                
-                        .comment {
-                            display: flex;
-                            flex-direction: column;
-                            margin-bottom: 19px;
-                            padding: 20px;
-                            border: 1px solid #241146;
-                            border-radius: 5px;
-                            background-color: #0e052d;
-                        }
-                
-                        .comment-header {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 10px;
-                        }
-                
-                        .comment-header img {
-                            border-radius: 50%;
-                            margin-right: 10px;
-                        }
-                
-                        .username {
-                            font-weight: bold;
-                            margin-right: 10px;
-                        }
-                
-                        .comment-date {
-                            font-size: 12px;
-                            color: #777;
-                        }
-                
-                        .comment-body {
-                            margin-top: 10px;
-                        }
-                
-                        .comment-rating {
-                            display: flex;
-                            align-items: center;
-                        }
-                
-                        .comment-form {
-                            display: flex;
-                            flex-direction: column;
-                            margin-top: 20px;
-                            padding: 20px;
-                            border: 1px solid #0b0331;
-                            border-radius: 5px;
-                            background-color: #0e052d;
-                        }
-                
-                        .comment-form textarea {
-                            width: 100%;
-                            height: 100px;
-                            margin-bottom: 10px;
-                            padding: 10px;
-                            border-radius: 5px;
-                            border: 1px solid #0e052d;
-                        }
-                
-                        .star-rating {
-                            display: flex;
-                            flex-direction: row-reverse;
-                            justify-content: center;
-                            margin-bottom: 10px;
-                        }
-                
-                        .star-rating input {
-                            display: none;
-                        }
-                
-                        .star-rating label {
-                            font-size: 20px;
-                            color: #6e1a1a;
-                            cursor: pointer;
-                        }
-                
-                        .star-rating input:checked ~ label {
-                            color: gold;
-                        }
-                
-                        .star-rating label:hover,
-                        .star-rating label:hover ~ label {
-                            color: gold;
-                        }
                     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-                        
-                      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
                 
-                    
-                        
+    
+                        <div style="width: 100%; height: auto;">
                             
+                            <div style="width: 100%; padding: 10px; border: 1px solid #09021b; border-radius: 5px; background-color: #06101b; color: rgb(236, 236, 244); text-align: center;">
+                                
+                                <div style=" text-align:left;"> <p>Título: Red Dead Redemption 2</p>  <p>Gênero: Ação, Aventura</p>
+                        
+                                <p>Desenvolvedor: Rockstar Games</p>
+                                
+                                <p>Série: Red Dead Redemption</p>
+                                <p>Data de lançamento: 5/dez./2019</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div style="width: 100%; padding: 10px; border: 1px solid #06010f; border-radius: 5px; background-color: #06101b; text-align: center; margin-top: 60px;">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjvwvbbnhYVf2C8TLmNb5xPad70E5XnnXritve5AVmE2nJDCg5-_CF5HnjFtPHqAPjSj9dA8QFlaruNeJNB2utq4mkLnT8pA8iYSHvsTx7iVK3EFyNEgvbVoOhS8hiRIhr6u3V1LwVOLw0P4hb3h6xTFJLZu-n3wGWRIDNWwF50ZZo07mq4Y2y6waYF_9D/s800/premios_steam_2023_indicados_premiacao.jpg" alt="Steam Awards 2023" style="width: 100%; height: auto; margin-bottom: 20px;">
+                        <img src="https://www.rdr2.org/wp-content/uploads/2021/01/steamawards2.jpg" alt="Steam Awards" style="width: 100%; height: auto;">
+                    </div>
+                    
+    
+                    <!DOCTYPE html>
+                    <html lang="pt-BR">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
