@@ -1,1 +1,314 @@
+.conteudo {
+    height: fit-content;
+    width: calc(100% - 6em); 
+    padding-bottom: 25px;
+    margin-bottom: 2em;
+    position: relative; /* Permite que o conteúdo role com a página */
+    top: 10vh;
+    left: 4.8em;
+    padding-top: 8vh;
+    margin-left: 4em;
+}
+
+
+
+
+
+header {
+    background-color: #352315;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Estilo da logo */
+.logo-e-nome {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    
+}
+
+.logo-e-nome i {
+    font-size: 3em;  /* Ajuste o tamanho do ícone */
+}
+
+.logo-e-nome span {
+    font-size: 1.7em;  /* Ajuste o tamanho do texto */
+}
+
+/* Estilo do botão de logout */
+.logx {
+    font-family: "Kanit", sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+/* Menu Lateral */
+
+.menu-lateral {
+    background-color: #3f301d;
+    width: 3.7em;
+    height: 92vh;
+    padding: 0 0 40px 5px;
+    position: fixed;
+    bottom: 0;
+    top: 8vh;
+}
+
+hr {
+    opacity: 50%;
+}
+
+.menu-item {
+    transition: .2s;
+    width: 3.7em;
+}
+
+.menu-item:hover {
+    background: rgb(0 118 182 / 90%);
+    box-shadow: inset 0 2px 0px rgba(255, 255, 255, 0.688), inset -2px 0 0px rgba(255, 255, 255, 0.688), inset 0 -2px 0px rgba(255, 255, 255, 0.688);
+    width: 16em;
+}
+
+.txt-link {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    display: none;
+}
+
+.menu-item:hover .txt-link {
+    display: block;
+    white-space: nowrap;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 20px 5px;
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.menu-icon {
+    padding: 5px;
+}
+
+.menu-item a .menu-icon i {
+    font-size: 1.3em;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #090828;
+    color: white;
+    margin-top: 50px;
+
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+}
+.content img {
+    margin-top: 40px;
+    width: 80%;
+    height: 600px;
+    object-fit: cover;
+    margin-top: 40px;
+    
+}
+.media {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin-top: 40px;
+    width: 80%;
+    gap: 20px;
+}
+.media video {
+    width: 65%;
+    height: auto;
+    float: left; 
+}
+.media-content {
+    margin-top: -30px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.media img {
+    width: 100%;
+    height: auto;
+}
+.description {
+    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: 1.6;
+    color: rgb(245, 245, 247);
+}
+.game-description {
+    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: 1.2;
+    color: white;
+}
+.game-info {
+    margin-top: 40px;
+    width: 100%;
+    color: rgb(248, 244, 244);
+    text-align: justify;
+    line-height: 1.8;
+    float: left; 
+}
+.game-image {
+    margin-top: 40px;
+    width: 30%; 
+    height: auto;
+    float: right; 
+    margin-left: 20px; 
+}
+
+.rating-container {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #080336;
+    border-radius: 5px;
+    background-color: #090328;
+    text-align: center;
+}
+
+.star {
+    color: gold;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.comments-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+    padding: 20px;
+    border: 1px solid #241146;
+    border-radius: 5px;
+    background-color: #0e052d;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #777;
+}
+
+.comment-body {
+    margin-top: 10px;
+}
+
+.comment-rating {
+    display: flex;
+    align-items: center;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #0b0331;
+    border-radius: 5px;
+    background-color: #0e052d;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0e052d;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 20px;
+    color: #6e1a1a;
+    cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+ul:not(.menu-lateral ul) {
+    list-style-type: disc; /* Permite marcadores em outras listas */
+}
 
